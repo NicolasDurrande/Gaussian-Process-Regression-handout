@@ -37,7 +37,7 @@
 \newtheorem{example}{Example}
 
 \author{N. Durrande}
-\date{Mines St-\'Etienne -- Data Science -- 2015/2016}
+\date{Mines St-\'Etienne -- Data Science -- 2016/2017}
 \title{Lecture notes on Gaussian process regression}
 
 \linespread{1.2}
@@ -342,15 +342,18 @@ The most common one-dimensional and $d$-dimensional covariances are regrouped in
 		Matern 5/2 & $\displaystyle k(x,y) = \sigma^2 \left(1 + \frac{\sqrt{5}|x-y|}{\theta} + \frac{5|x-y|^2}{3 \theta^2} \right) \exp \left(- \frac{\sqrt{5}|x-y|}{\theta} \right)$ &\\[6mm]
 		Matern 3/2 & $\displaystyle k(x,y) = \sigma^2 \left(1 + \frac{\sqrt{3}|x-y|}{\theta} \right) \exp \left(- \frac{\sqrt{3}|x-y|}{\theta} \right)$ &\\[6mm]
 		exponential & $\displaystyle k(x,y) = \sigma^2 \exp \left(- \frac{|x-y|}{\theta} \right)$ &\\[6mm]
-		Brownian\footnote{Only defined over $\mathds{R}^{+} \times \mathds{R}^+$} & $ \displaystyle k(x,y) = \sigma^2 \min (x,y) $ &\\[6mm]
+		Brownian$^1$ & $ \displaystyle k(x,y) = \sigma^2 \min (x,y) $ &\\[6mm]
 		white noise & $ \displaystyle k(x,y) = \sigma^2 \delta_{x,y} $ &\\[6mm]
 		constant & $ \displaystyle k(x,y) = \sigma^2 $ &\\[6mm]
 		linear & $ \displaystyle k(x,y) = \sigma^2 xy $ &\\[6mm]
 		cosine & $ \displaystyle k(x,y) = \sigma^2 \cos \left (\frac{x-y}{\theta} \right) $ &\\[6mm]
 		sinc & $ \displaystyle k(x,y) = \sigma^2 \frac{\theta}{x-y} \sin \left( \frac{x-y}{\theta} \right) $ &\\[6mm] \hline
 \end{tabular}
+\begin{tabular}{ll}
+\footnotesize{$^1$} & \footnotesize{Also called Gaussian kernel, radial basis function (rbf) or exponentiated quadratic.}\\
+\footnotesize{$^2$} & \footnotesize{Only defined over $\mathds{R}^{+} \times \mathds{R}^+$.}
+\end{tabular}
 \end{center}
-\hspace{1cm} \footnotesize{$^1$ Also called Gaussian kernel, radial basis function (rbf) or exponentiated quadratic.}
 \caption{Examples of (common) one-dimensional kernels.}
 \label{tab:ker1d}
 \end{table}
